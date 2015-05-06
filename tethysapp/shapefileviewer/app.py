@@ -31,17 +31,6 @@ class ShapefileViewer(TethysAppBase):
 
         return url_maps
 
-    def persistent_stores(self):
-        """
-        Add one or more persistent stores
-        """
-        stores = (PersistentStore(name='shapefileviewer_db',
-                                  initializer='init_stores:init_shapefileviewer_db',
-                                  spatial=True
-        ),
-        )
-
-        return stores
 
     def spatial_dataset_services(self):
         """
