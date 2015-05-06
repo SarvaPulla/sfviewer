@@ -1,0 +1,24 @@
+{% extends "shapefileviewer/base.html" %}
+
+{% load staticfiles %}
+
+
+
+{% load tethys_gizmos %}
+
+{% block app_navigation_items %}
+  <li><a href="{% url 'shapefileviewer:home' %}">Home</a></li>
+  <li class="active"><a href="{% url 'shapefileviewer:map' %}">View Shapefile</a></li>
+{% endblock %}
+
+{% block app_content %}
+{% gizmo map_view map_view_options %}
+{% endblock %}            
+
+{% block scripts %}
+  {{ block.super }}
+ 
+{% endblock %}
+
+{% block app_actions %}
+{% endblock %}

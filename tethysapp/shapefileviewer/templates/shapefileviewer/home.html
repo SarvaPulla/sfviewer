@@ -1,0 +1,17 @@
+{% extends "shapefileviewer/base.html" %}
+
+{% block app_navigation_items %}
+  <li class="active"><a href="{% url 'shapefileviewer:home' %}">Home</a></li>
+  <li><a href="{% url 'shapefileviewer:map' %}">View Shapefile</a></li>
+{% endblock %}
+
+{% block app_content %}
+
+  <h1>Welcome to the HydroShare Shapefile Viewer Tool!</h1>
+  <p>Simply upload a file and click away</p>
+	
+	
+{% endblock %}
+
+{% block app_actions %}
+{% endblock %}

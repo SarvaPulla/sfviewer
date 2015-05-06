@@ -1,0 +1,24 @@
+{% extends "shapefileviewer/base.html" %}
+
+{% block app_navigation_items %}
+  <li class="active"><a href="{% url 'shapefileviewer:home' %}">Home</a></li>
+  <li><a href="{% url 'shapefileviewer:map' %}">View Shapefile</a></li>
+{% endblock %}
+
+{% block app_content %}
+
+  <h1>Welcome to the HydroShare Shapefile Viewer Tool!</h1>
+  <p>Simply upload a file and click away</p>
+	<form method="post" action="map/">
+	{% csrf_token %}
+	 
+	<li><p>Filename</p><input type="text" name="filename" /></li>
+	<li><p>Branch</p><input type="text" name="branch" /></li>
+	<li><p>Resource Id</p><input type="text" name="res_id" /></li>
+<br />	
+	<input type="submit" value="UPLOAD SHAPEFILE!" name="name-form-submit" class="btn btn-default" />
+	
+{% endblock %}
+
+{% block app_actions %}
+{% endblock %}
